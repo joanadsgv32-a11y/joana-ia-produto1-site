@@ -70,6 +70,19 @@ section p.sec-lead{color:var(--muted);margin:0 0 1.25rem}
 .band p{margin:0 0 1.25rem;color:var(--muted)}
 footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:.95rem}
 
+
+.prompts{list-style:none;padding:0;margin:0 0 3rem;display:grid;gap:1rem}
+.prompt{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:1.25rem}
+.prompt-head{display:flex;gap:.9rem;align-items:flex-start}
+.prompt-head h3{font-size:1.2rem;font-weight:700}
+.prompt-head p{margin:.15rem 0 0;color:var(--muted);font-size:.98rem}
+.num{flex:none;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.prompt-text{background:var(--soft);border-radius:14px;padding:1rem;margin:1rem 0;font-size:.95rem;line-height:1.55;white-space:pre-wrap}
+.copy{padding:.6rem 1.1rem;font-size:.95rem;cursor:pointer;font-family:inherit}
+.copy.ok{background:var(--accent);color:var(--accent-ink)}
+#guias{margin-top:0}
+.more-lead{font-size:1.1rem;margin:0 0 1rem}
+#prompts .featured{margin-bottom:3rem}
 @media (max-width:520px){
   .soon li{flex-direction:column;align-items:flex-start}
 }
@@ -84,10 +97,13 @@ footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:.95rem}
     <p class="lead">Guias e kits práticos com o que eu uso no dia a dia com clientes reais. Sem precisar programar.</p>
   </header>
 
+  <h2 class="sec" id="guias">Guias completos</h2>
+  <p class="sec-lead">Guias práticos, com o passo a passo e tudo pronto para usar.</p>
+
   <article class="featured" id="do-prompt-ao-ar">
     <span class="tag">Disponível agora</span>
-    <h2>Do Prompt ao Ar</h2>
-    <p>Coloque sua landing page no ar com IA, com domínio próprio .com.br, em uma tarde.</p>
+    <h2>Landing pages e sites com IA</h2>
+    <p>Guia “Do Prompt ao Ar”: coloque sua landing page ou site no ar com IA, com domínio próprio .com.br, em uma tarde.</p>
     <ul>
       <li>Prompt pronto para criar a página no Claude</li>
       <li>Publicação na Vercel, passo a passo</li>
@@ -155,6 +171,54 @@ footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:.95rem}
     </ul>
   </section>
 
+  <section id="prompts">
+    <h2 class="sec">Prompts prontos: 5 fotos que vendem</h2>
+    <p class="sec-lead">Grátis para você usar agora. Abra o ChatGPT ou o Gemini, envie a foto do seu produto, do seu espaço ou de você, cole o prompt e troque o que está entre colchetes.</p>
+    <ol class="prompts">
+      <li class="prompt">
+        <div class="prompt-head"><span class="num">1</span><div><h3>Foto de catálogo</h3><p>O que mais impressiona no antes e depois.</p></div></div>
+        <p class="prompt-text" id="prompt-1">Transforme em uma foto de catálogo: produto centralizado sobre fundo [cor da sua marca] liso e infinito, iluminação de estúdio suave e uniforme, sombra natural embaixo e margem livre em volta. Formato 1:1. Use a foto que enviei como base e mantenha exatamente o mesmo produto: formato, cores, rótulo, estampa, tamanho e detalhes iguais. Não invente itens que não estão na foto. Resultado com aparência de fotografia profissional real, sem cara de imagem gerada por IA, sem adicionar textos novos e sem marca d’água.</p>
+        <button class="btn btn-ghost copy" type="button" data-target="prompt-1">Copiar prompt</button>
+      </li>
+      <li class="prompt">
+        <div class="prompt-head"><span class="num">2</span><div><h3>Mão segurando o produto</h3><p>Deixa a foto mais humana e vende mais.</p></div></div>
+        <p class="prompt-text" id="prompt-2">Mostre uma mão segurando o produto em primeiro plano, com unhas neutras e pele natural, fundo do ambiente de uso desfocado. Luz natural de janela. Formato vertical 4:5. Use a foto que enviei como base e mantenha exatamente o mesmo produto: formato, cores, rótulo, estampa, tamanho e detalhes iguais. Não invente itens que não estão na foto. Resultado com aparência de fotografia profissional real, sem cara de imagem gerada por IA, sem adicionar textos novos e sem marca d’água.</p>
+        <button class="btn btn-ghost copy" type="button" data-target="prompt-2">Copiar prompt</button>
+      </li>
+      <li class="prompt">
+        <div class="prompt-head"><span class="num">3</span><div><h3>Foto de perfil profissional</h3><p>Serve para qualquer profissão.</p></div></div>
+        <p class="prompt-text" id="prompt-3">Transforme em uma foto de perfil profissional: enquadramento do peito para cima, fundo [cor] liso e levemente desfocado, iluminação suave de estúdio no rosto. Formato 1:1, com o rosto centralizado. Use a foto que enviei como base e mantenha exatamente o meu rosto, traços, tom de pele, cabelo e expressão. Não rejuvenesça, não afine e não altere o formato do rosto nem do corpo. Resultado com aparência de fotografia profissional real, sem cara de imagem gerada por IA, sem texto escrito e sem marca d’água.</p>
+        <button class="btn btn-ghost copy" type="button" data-target="prompt-3">Copiar prompt</button>
+      </li>
+      <li class="prompt">
+        <div class="prompt-head"><span class="num">4</span><div><h3>Foto do seu espaço</h3><p>Para lojas, salões e consultórios.</p></div></div>
+        <p class="prompt-text" id="prompt-4">Melhore a foto do meu espaço: luz natural mais clara e uniforme, cores corrigidas, linhas retas, ambiente arrumado e convidativo. Formato 4:5. Use a foto que enviei como base e mantenha a estrutura real do espaço, os móveis e as cores principais. Telas de computador ou TV devem aparecer desligadas, e logos, letreiros e textos devem ficar exatamente iguais ao original. Apenas melhore luz, organização e enquadramento, sem acrescentar elementos que não existem. Resultado com aparência de fotografia profissional real, sem cara de imagem gerada por IA e sem marca d’água.</p>
+        <button class="btn btn-ghost copy" type="button" data-target="prompt-4">Copiar prompt</button>
+      </li>
+      <li class="prompt">
+        <div class="prompt-head"><span class="num">5</span><div><h3>Espaço livre para preço e oferta</h3><p>O que transforma a foto em post de venda.</p></div></div>
+        <p class="prompt-text" id="prompt-5">Coloque o produto ou serviço à esquerda sobre fundo [cor da sua marca] liso, com o lado direito vazio e limpo para eu colocar o preço e a oferta depois. Luz de estúdio. Formato 1:1. Use a foto que enviei como base e mantenha o produto ou a pessoa exatamente como são, sem alterar rosto, corpo, formato ou cores. Resultado com aparência de fotografia profissional real, sem cara de imagem gerada por IA, sem adicionar textos novos e sem marca d’água.</p>
+        <button class="btn btn-ghost copy" type="button" data-target="prompt-5">Copiar prompt</button>
+      </li>
+    </ol>
+    <p class="more-lead"><strong>Esses são 5 prompts prontos.</strong> Quer mais? Pegue o guia completo, com 50 prompts para produto, retrato, espaço, ofertas, redes sociais e muito mais.</p>
+    <article class="featured" id="50-prompts">
+      <span class="tag">Guia completo</span>
+      <h2>50 prompts para fotos profissionais com IA</h2>
+      <p>Transforme a foto do celular em foto de catálogo, retrato, anúncio e post. Sem fotógrafo, sem estúdio.</p>
+      <ul>
+        <li>50 prompts prontos para copiar e colar no ChatGPT ou no Gemini</li>
+        <li>7 categorias: produto, retrato, espaço, serviço, ofertas, redes sociais e lifestyle</li>
+        <li>Antes e depois reais, feitos com fotos tiradas no celular</li>
+        <li>Dicas para a IA manter o produto e o rosto exatamente como são</li>
+      </ul>
+      <div class="buy">
+        <span class="price">R$ 9,99 <small>PDF · acesso imediato</small></span>
+        <a class="btn btn-solid" href="https://pay.kiwify.com.br/r3CRf8o">Comprar os prompts</a>
+      </div>
+    </article>
+  </section>
+
   <section class="band" id="consultoria">
     <h2>Prefere que eu faça para você?</h2>
     <p>Eu posso criar sua página, seu robô de WhatsApp ou sua automação com IA para você. Ou, se preferir aprender a fazer, marcamos uma mentoria. Entre em contato pelo Instagram.</p>
@@ -163,5 +227,15 @@ footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:.95rem}
 
   <footer>© 2026 Joana Gonçalves · Consultoria Vargas</footer>
 </main>
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var text=document.getElementById(btn.dataset.target).innerText;
+    function done(){btn.textContent='Copiado ✓';btn.classList.add('ok');setTimeout(function(){btn.textContent='Copiar prompt';btn.classList.remove('ok')},2000)}
+    function fallback(){var t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(t)}
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
+  });
+});
+</script>
 </body>
 </html>
